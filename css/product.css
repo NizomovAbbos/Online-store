@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-blue: #114bf7;
+  --main-purple: #59b3b6;
+  --main-grey: #ccc;
+  --sub-grey: #d9d9d9;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+  padding: 10px;
+}
+.row{
+  max-width: 500px;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+.title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  height: 3.5px;
+  width: 30px;
+  background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+  bottom: 0;
+}
+
+.user__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.from-input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid var(--main-grey);
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.from-input:focus,
+.from-input:valid {
+  border-color: var(--main-purple);
+}
+.from-input:hover {
+  background: linear-gradient(-135deg, var(--main-blue), var(--main-purple));
+}
+
+.product_button{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+  transition: all 0.3s ease;
+}
+
+@media only screen and (max-width: 584px) {
+  .row {
+      max-width: 100%;
+  }
+
+  .input__box {
+      margin-bottom: 15px;
+      width: 100%;
+  }
+
+  .user__details {
+      max-height: 300px;
+      overflow-y: scroll;
+  }
+
+  .user__details::-webkit-scrollbar {
+      width: 0;
+  }
+}
+/*.......................... */
+.image-input{
+	text-align: center;
+}
+.image-input:hover{
+	animation: shake .35s;
+}
+img{
+  max-width: 175px;
+  display: none;
+}
+span{
+display: none;
+		text-align: center;
+		cursor: pointer;
+}
+@keyframes shake{
+	0%{
+		transform: rotate(0deg)
+  }
+	25%{
+		transform: rotate(10deg)
+  }
+	50%{
+		transform: rotate(0deg)
+  }
+	75%{
+		transform: rotate(-10deg)
+  }
+	100%{
+		transform: rotate(0deg)
+  }
+}
